@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can be added below this line */
+
+/* Base background and text colors */
+body {
+  background-color: #08103c; /* dark blue background */
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #b52274; /* Updated background color */
+  color: #ce1919;
+  padding: 0.5rem 1rem; /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #2b98ea;
+}
+
+nav a {
+  color: #2b98ea;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #b52274;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2b98ea;
+  margin-top: 2rem;
+}
+
+/* Paragraphs */
+p {
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+/* Buttons */
+button {
+  background-color: #b52274;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #a01767;
+}
+
+/* Logo and image */
+img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 200px;
+}
+
+/* Optional: add glowing effect */
+.glow {
+  text-shadow: 0 0 10px #2b98ea, 0 0 20px #b52274;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+}
+
+a {
+    @apply text-blue-500 hover:text-blue-700;
+}
+
+footer {
+    @apply bg-gray-800 text-white py-4;
+}
+
+main {
+  background-color: #08103c; /* Match the header background */
+  color: #ffffff; /* White text for readability */
+  padding: 2rem;
+  min-height: calc(100vh - 120px); /* Adjust for header and footer height */
+}
+
+/* Ensure consistent text styling */
+main h1, main p {
+  color: #dddddd;
+}
