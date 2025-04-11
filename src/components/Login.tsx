@@ -20,14 +20,14 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-[#08103c] text-white pt-10">
       <h1 className="text-4xl font-bold mb-4">Login</h1>
       <p className="text-lg mb-8">Please log in to access your account</p>
       <form className="w-full max-w-md" onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700" htmlFor="username">Username</label>
+          <label className="block text-sm font-medium text-gray-300" htmlFor="username">Username</label>
           <input
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-gray-800 text-white"
             type="text"
             id="username"
             value={username}
@@ -36,9 +36,9 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700" htmlFor="password">Password</label>
+          <label className="block text-sm font-medium text-gray-300" htmlFor="password">Password</label>
           <input
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-gray-800 text-white"
             type="password"
             id="password"
             value={password}
@@ -47,7 +47,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
           />
         </div>
         <button
-          className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+          className="w-full bg-[#b52274] text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
           type="submit"
         >
           Login

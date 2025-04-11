@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Login from './components/Login';
+import AddTechnology from './pages/AddTechnology';
+import TechnologyList from './pages/TechnologyList';
+import DetailsPage from './pages/DetailsPage';
+import EditTechnology from './pages/EditTechnology';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
@@ -35,11 +37,17 @@ const App = () => {
             <Route path="/home">
               {isAuthenticated ? <Home /> : <Redirect to="/" />}
             </Route>
-            <Route path="/about">
-              {isAuthenticated ? <About /> : <Redirect to="/" />}
+            <Route path="/technology-list">
+              {isAuthenticated ? <TechnologyList /> : <Redirect to="/" />}
             </Route>
-            <Route path="/contact">
-              {isAuthenticated ? <Contact /> : <Redirect to="/" />}
+            <Route path="/details">
+              {isAuthenticated ? <DetailsPage /> : <Redirect to="/" />}
+            </Route>
+            <Route path="/add-technology">
+              {isAuthenticated ? <AddTechnology /> : <Redirect to="/" />}
+            </Route>
+            <Route path="/edit-technology">
+              {isAuthenticated ? <EditTechnology /> : <Redirect to="/" />}
             </Route>
             <Route>
               {isAuthenticated ? <NotFound /> : <Redirect to="/" />}

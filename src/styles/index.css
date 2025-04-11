@@ -13,20 +13,32 @@ body {
   padding: 0;
 }
 
-/* Navbar styling */
+/* Adjusted navbar styling to fix alignment issue */
 nav {
-  background-color: #b52274; /* Updated background color */
-  color: #ce1919;
-  padding: 0.5rem 1rem; /* Reduced padding */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Ensures proper alignment: left, center, and right */
   align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #b52274;
   border-bottom: 2px solid #2b98ea;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Distributes items evenly across the navbar */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center; /* Centers the text within each section */
 }
 
 nav a {
   color: #2b98ea;
-  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
 }
