@@ -6,8 +6,8 @@
 
 /* Base background and text colors */
 body {
-  background-color: #08103c; /* dark blue background */
-  color: #ffffff;
+  background-color: #ffffff; /* white background for normal mode */
+  color: #000000; /* black text for normal mode */
   font-family: 'Orbitron', sans-serif; /* futuristic font */
   margin: 0;
   padding: 0;
@@ -114,4 +114,44 @@ main {
 /* Ensure consistent text styling */
 main h1, main p {
   color: #dddddd;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode button:hover {
+  background-color: #555555;
+}
+
+/* Dark mode styles for navigation bar */
+.dark-mode nav {
+  background-color: #333333; /* Grey background for navigation bar in dark mode */
+  border-bottom: 2px solid #555555; /* Slightly lighter grey for border */
+}
+
+.dark-mode nav a {
+  color: #ffffff; /* White text for links in dark mode */
+}
+
+.dark-mode nav a:hover {
+  color: #bbbbbb; /* Light grey text on hover in dark mode */
+}
+
+/* Dark mode styles for the rest of the screen */
+.dark-mode main {
+  background-color: #000000; /* Black background for the rest of the screen in dark mode */
+  color: #ffffff; /* White text for readability */
+}
+
+/* Dark mode styles for the TechTrove text */
+.dark-mode h1 {
+  color: #ffffff; /* White text for TechTrove in dark mode */
 }

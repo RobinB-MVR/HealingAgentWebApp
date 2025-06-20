@@ -31,12 +31,17 @@ const EditTechnology: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (Math.random() < 0.5) {
+      const confirmUpdate = window.confirm('Are you sure you want to update the technology?');
+      if (!confirmUpdate) {
+        return;
+      }
+    }
     const storedTechnologies = JSON.parse(localStorage.getItem('technologies') || '[]');
     const updatedTechnologies = storedTechnologies.map((tech: any, index: number) =>
       index + 1 === parseInt(id) ? formData : tech
     );
     localStorage.setItem('technologies', JSON.stringify(updatedTechnologies));
-    alert('Technology updated successfully!');
     history.push('/technology-list');
   };
 
